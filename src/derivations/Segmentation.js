@@ -414,6 +414,10 @@ export default class Segmentation extends DerivedPixels {
                 Segment.SegmentedPropertyTypeCodeSequence
         };
 
+        if (Segment.SegmentDescription) {
+            reNumberedSegmentCopy.SegmentDescription = Segment.SegmentDescription;
+        }
+
         if (
             SegmentAlgorithmType === "AUTOMATIC" ||
             SegmentAlgorithmType === "SEMIAUTOMATIC"
